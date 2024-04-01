@@ -1,6 +1,5 @@
 import org.example.Company;
 import org.example.Employee;
-import org.example.Healthplan;
 import org.example.enums.Plan;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
