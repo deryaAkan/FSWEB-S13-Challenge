@@ -3,7 +3,7 @@ import org.example.enums.Plan;
 
 public class Main {
     public static void main(String[] args) {
-        Healthplan healthplan = new Healthplan(1, "Basic", Plan.BASIC);
+        HealthPlan healthplan = new HealthPlan(1, "Basic", Plan.BASIC);
         System.out.println("Healthplan object:");
         System.out.println(healthplan.toString());
 

@@ -5,14 +5,14 @@ public class Employee {
     private String fullName;
     private String email;
     private String password;
-    private String[] healthplans;
+    private String[] healthPlans;
 
     public Employee(int id, String fullName, String email, String password, String[] healthplans){
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.healthplans = healthplans;
+        this.healthPlans = healthplans;
     }
 
     public int getId(){
@@ -48,14 +48,14 @@ public class Employee {
     }
 
     public String[] getHealthplans(){
-        return healthplans;
+        return healthPlans;
     }
 
     public void addHealthplan(int index, String name){
-        if (index < 0 || index >= healthplans.length) {
+        if (index < 0 || index >= healthPlans.length) {
             System.out.println("Geçersiz index!");
-        } else if (healthplans[index] == null) {
-            healthplans[index] = name;
+        } else if (healthPlans[index] == null) {
+            healthPlans[index] = name;
             System.out.println(name + " planı başarıyla eklendi.");
         } else {
             System.out.println("Bu indeks zaten dolu.");

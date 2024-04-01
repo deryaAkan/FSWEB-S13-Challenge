@@ -1,6 +1,7 @@
 import org.example.Company;
 import org.example.Employee;
 import org.example.enums.Plan;
+import org.example.HealthPlan;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(ResultAnalyzer.class)
 public class CompanyTest {
 
-    private Healthplan healthplan;
+    private HealthPlan healthplan;
     private Employee employee;
     private Company company;
 
     @BeforeEach
     void setUp() {
-        healthplan = new Healthplan(1, "A Sigorta", Plan.BASIC);
+        healthplan = new HealthPlan(1, "A Sigorta", Plan.BASIC);
         String[] healthplans = new String[2];
         healthplans[0] = healthplan.getName();
         employee = new Employee(1, "John Doe", "jd@test.com", "1234", healthplans);
@@ -31,6 +32,7 @@ public class CompanyTest {
         employees[0] = employee.getFullName();
         company = new Company(1, "Workintech", 1000, employees);
     }
+
 
     @DisplayName("Healthplan sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
@@ -84,7 +86,7 @@ public class CompanyTest {
     public void testEmployeeInstanceTypes() throws NoSuchFieldException {
         assertThat(employee.getFullName(), instanceOf(String.class));
         assertThat(employee.getEmail(), instanceOf(String.class));
-        assertThat(employee.getHealthPlans(), instanceOf(String[].class));
+        assertThat(employee.getHealthplans(), instanceOf(String[].class));
     }
 
     @DisplayName("addHealthplan method başarılı çalışıyor mu?")
