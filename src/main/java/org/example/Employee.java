@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Employee {
     private int id;
     private String fullName;
@@ -60,5 +62,16 @@ public class Employee {
         } else {
             System.out.println("Bu indeks zaten dolu.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", healthPlans=" + Arrays.toString(healthPlans) +
+                '}';
     }
 }
